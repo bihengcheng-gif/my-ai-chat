@@ -174,20 +174,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
         title={Locale.Context.Edit}
         onClose={() => props.onClose()}
         actions={[
-          <IconButton
-            key="reset"
-            icon={<ResetIcon />}
-            bordered
-            text={Locale.Chat.Config.Reset}
-            onClick={async () => {
-              if (await showConfirm(Locale.Memory.ResetConfirm)) {
-                chatStore.updateTargetSession(
-                  session,
-                  (session) => (session.memoryPrompt = ""),
-                );
-              }
-            }}
-          />,
+          
           <IconButton
             key="copy"
             icon={<CopyIcon />}
@@ -213,17 +200,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
             );
           }}
           shouldSyncFromGlobal
-          extraListItems={
-            session.mask.modelConfig.sendMemory ? (
-              <ListItem
-                className="copyable"
-                title={`${Locale.Memory.Title} (${session.lastSummarizeIndex} of ${session.messages.length})`}
-                subTitle={session.memoryPrompt || Locale.Memory.EmptyContent}
-              ></ListItem>
-            ) : (
-              <></>
-            )
-          }
+          
         ></MaskConfig>
       </Modal>
     </div>
