@@ -64,18 +64,18 @@ export const DEFAULT_CONFIG = {
   models: DEFAULT_MODELS as any as LLMModel[],
 
   modelConfig: {
-    model: "gpt-4o-mini" as ModelType,
-    providerName: "OpenAI" as ServiceProvider,
-    temperature: 0.5,
+    model: "gemini-3.1-pro" as ModelType,
+    providerName: "Google" as ServiceProvider,
+    temperature: 0.7,
     top_p: 1,
-    max_tokens: 4000,
+    max_tokens: 8000,
     presence_penalty: 0,
     frequency_penalty: 0,
     sendMemory: true,
-    historyMessageCount: 4,
-    compressMessageLengthThreshold: 1000,
-    compressModel: "",
-    compressProviderName: "",
+    historyMessageCount: 16,
+    compressMessageLengthThreshold: 4000,
+    compressModel: "gemini-3.1-pro",
+    compressProviderName: "Google",
     enableInjectSystemPrompts: true,
     template: config?.template ?? DEFAULT_INPUT_TEMPLATE,
     size: "1024x1024" as ModelSize,
@@ -216,8 +216,8 @@ export const useAppConfig = createPersistStore(
 
       if (version < 3.4) {
         state.modelConfig.sendMemory = true;
-        state.modelConfig.historyMessageCount = 4;
-        state.modelConfig.compressMessageLengthThreshold = 1000;
+        state.modelConfig.historyMessageCount = 16;
+        state.modelConfig.compressMessageLengthThreshold = 4000;
         state.modelConfig.frequency_penalty = 0;
         state.modelConfig.top_p = 1;
         state.modelConfig.template = DEFAULT_INPUT_TEMPLATE;
