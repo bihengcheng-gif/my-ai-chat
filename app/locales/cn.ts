@@ -109,7 +109,7 @@ const cn = {
     MessageFromChatGPT: "ChatGPT",
     Format: {
       Title: "导出格式",
-      SubTitle: "可以导出 Markdown 文本或者 PNG 图片",
+      SubTitle: "将其保存为文本、图片或数据文件",
     },
     IncludeContext: {
       Title: "包含角色上下文",
