@@ -374,12 +374,12 @@ export function PreviewActions(props: {
         )}
         
         <IconButton
-          text={Locale.Export.Share}
-          bordered
-          shadow
-          icon={loading ? <LoadingIcon /> : <ShareIcon />}
-          onClick={share}
-        ></IconButton>
+              text={Locale.Export.Download}
+              bordered
+              shadow
+              icon={<DownloadIcon />}
+              onClick={props.download}
+            ></IconButton>
       </div>
       <div
         style={{
