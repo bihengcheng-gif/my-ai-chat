@@ -2022,7 +2022,7 @@ function _Chat() {
                   id="chat-input"
                   ref={inputRef}
                   className={styles["chat-input"]}
-                  placeholder={"公主请输入..."} )
+                  placeholder="公主请输入..."
                   onInput={(e) => onInput(e.currentTarget.value)}
                   value={userInput}
                   onKeyDown={onInputKeyDown}
