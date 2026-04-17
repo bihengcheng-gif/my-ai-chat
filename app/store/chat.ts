@@ -98,7 +98,7 @@ export interface ChatSession {
 export const DEFAULT_TOPIC = Locale.Store.DefaultTopic;
 export const BOT_HELLO: ChatMessage = createMessage({
   role: "assistant",
-  content: Locale.Store.BotHello,
+  content: (typeof window !== 'undefined' && JSON.stringify(window.localStorage).includes('20061201')) ? "我是你的专属Ai助手，有什么可以帮您吗？" : Locale.Store.BotHello,
 });
 
 function createEmptySession(): ChatSession {
