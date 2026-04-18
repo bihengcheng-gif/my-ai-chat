@@ -420,7 +420,6 @@ You are an AI assistant with access to system tools. Your role is to help users 
    
 `;
 
-export const SUMMARIZE_MODEL = "gpt-4o-mini";
 export const SUMMARIZE_MODEL = "gpt-5.4";
 export const DEEPSEEK_SUMMARIZE_MODEL = "deepseek-chat";
 
