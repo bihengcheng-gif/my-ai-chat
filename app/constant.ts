@@ -421,8 +421,8 @@ You are an AI assistant with access to system tools. Your role is to help users 
 `;
 
 export const SUMMARIZE_MODEL = "gpt-5.4";
-export const DEEPSEEK_SUMMARIZE_MODEL = "deepseek-chat";
-
+export const GEMINI_SUMMARIZE_MODEL = "gpt-5.4";
+export const DEEPSEEK_SUMMARIZE_MODEL = "gpt-5.4";
 export const KnowledgeCutOffDate: Record<string, string> = {
   default: "2021-09",
   "gpt-4-turbo": "2023-12",
