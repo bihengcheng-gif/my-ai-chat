@@ -65,7 +65,7 @@ export const DEFAULT_CONFIG = {
 
   modelConfig: {
     model: "gpt-5.4" as ModelType,
-    providerName: "Google" as ServiceProvider,
+    providerName: "OpenAI" as ServiceProvider,
     temperature: 0.7,
     top_p: 1,
     max_tokens: 8000,
