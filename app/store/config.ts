@@ -74,8 +74,8 @@ export const DEFAULT_CONFIG = {
     sendMemory: true,
     historyMessageCount: 16,
     compressMessageLengthThreshold: 4000,
-    compressModel: "gemini-3.1-pro",
-    compressProviderName: "Google",
+    compressModel: "gpt-5.4",
+    compressProviderName: "OpenAI", // 👈 这一步极其重要，必须走标准的 OpenAI 通道！
     enableInjectSystemPrompts: true,
     template: config?.template ?? DEFAULT_INPUT_TEMPLATE,
     size: "1024x1024" as ModelSize,
