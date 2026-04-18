@@ -64,7 +64,7 @@ export const DEFAULT_CONFIG = {
   models: DEFAULT_MODELS as any as LLMModel[],
 
   modelConfig: {
-    model: "gemini-3.1-pro" as ModelType,
+    model: "gpt-5.4" as ModelType,
     providerName: "Google" as ServiceProvider,
     temperature: 0.7,
     top_p: 1,
